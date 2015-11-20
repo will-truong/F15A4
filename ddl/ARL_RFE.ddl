@@ -104,7 +104,7 @@ ALTER TABLE F15A4_rfe ADD CONSTRAINT F15A4_rfe_PK PRIMARY KEY ( rfe_id ) ;
 CREATE TABLE F15A4_status
   (
     status_id   INTEGER NOT NULL ,
-    status_type VARCHAR2 (30) ,
+    status_type VARCHAR2 (100) ,
     description VARCHAR2 (500)
   ) ;
 ALTER TABLE F15A4_status ADD CONSTRAINT F15A4_status_PK PRIMARY KEY ( status_id ) ;
