@@ -32,6 +32,7 @@ select F15A4_comment_seq.nextval into :new.comment_id from dual;
 end; 
 /
 
+-- Table F15A4_contact has a compound primary key so no sequence or trigger was created for it.
 DROP SEQUENCE F15A4_document_seq ; 
 create sequence F15A4_document_seq 
 start with 100 
@@ -151,7 +152,6 @@ select F15A4_task_seq.nextval into :new.task_id from dual;
 end; 
 /
 
--- Table contacts has a compound primary key so no sequence or trigger was created for it.
 DROP INDEX F15A4_emp_employee_id_FK_0 ;
 CREATE INDEX F15A4_emp_employee_id_FK_0 ON F15A4_comment(F15A4_emp_employee_id) ;
 DROP INDEX F15A4_rfe_rfe_id_FK_1 ;
@@ -175,6 +175,6 @@ CREATE INDEX F15A4_status_status_id_FK_9 ON F15A4_rfe(F15A4_status_status_id) ;
 DROP INDEX F15A4_rfe_rfe_id_FK_10 ;
 CREATE INDEX F15A4_rfe_rfe_id_FK_10 ON F15A4_task(F15A4_rfe_rfe_id) ;
 DROP INDEX F15A4_rfe_rfe_id_FK_11 ;
-CREATE INDEX F15A4_rfe_rfe_id_FK_11 ON contacts(F15A4_rfe_rfe_id) ;
+CREATE INDEX F15A4_rfe_rfe_id_FK_11 ON F15A4_contact(F15A4_rfe_rfe_id) ;
 DROP INDEX F15A4_emp_employee_id_FK_12 ;
-CREATE INDEX F15A4_emp_employee_id_FK_12 ON contacts(F15A4_emp_employee_id) ;
+CREATE INDEX F15A4_emp_employee_id_FK_12 ON F15A4_contact(F15A4_emp_employee_id) ;
