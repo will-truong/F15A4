@@ -1,0 +1,88 @@
+
+-- Clear table contents
+TRUNCATE TABLE F15A4_auth;
+TRUNCATE TABLE F15A4_comment;
+TRUNCATE TABLE F15A4_contact;
+TRUNCATE TABLE F15A4_document;
+TRUNCATE TABLE F15A4_emp;
+TRUNCATE TABLE F15A4_history;
+TRUNCATE TABLE F15A4_lab;
+TRUNCATE TABLE F15A4_rfe;
+TRUNCATE TABLE F15A4_status;
+TRUNCATE TABLE F15A4_task;
+
+-- disable triggers before inserts
+alter trigger F15A4_auth_PK_trig disable;
+alter trigger F15A4_comment_PK_trig disable;
+alter trigger F15A4_document_PK_trig disable;
+alter trigger F15A4_emp_PK_trig disable;
+alter trigger F15A4_history_PK_trig disable;
+alter trigger F15A4_lab_PK_trig disable;
+alter trigger F15A4_rfe_PK_trig disable;
+alter trigger F15A4_status_PK_trig disable;
+alter trigger F15A4_task_PK_trig disable;
+
+INSERT INTO F15A4_auth(auth_id, authorization, description) VALUES(1, 'view', 'Normal permissions');
+INSERT INTO F15A4_auth(auth_id, authorization, description) VALUES(2, 'edit', 'Admin permissions');
+
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(1, 'Encryption', 'ENCR');
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(2, 'Propulsion', 'PROP');
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(3, 'Electricity', 'ELEC');
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(4, 'Gravity', 'GRAV');
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(5, 'Magnetism', 'MAG');
+INSERT INTO F15A4_lab(lab_id, lab_name, lab_code) VALUES(6, 'Administration', 'ADM');
+
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(1, 'Entered', 'The RFE has been created but has not yet been submitted for approval.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(2, 'Submitted', 'The RFE has been submitted to the Lab System Administrator for approval.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(3, 'Returned', 'The RFE has been returned for further information or clarification. Once submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(4, 'Recalled', 'The requestor has recalled an RFE that has not yet reached final approval. Once submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(5, 'Rejected', 'The RFE has been rejected and cannot be implemented.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(6, 'SA Approved', 'The Lab System Administrator has approved the RFE; it has been submitted for Lab Director approval.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(7, 'LD Approved', 'The Lab Director has approved the RFE; it has been submitted for Network Security Panel approval.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(8, 'CH Approved', 'The Lab Director has approved the RFE; it has been submitted to the Chairperson of Security Panel approval.');
+INSERT INTO F15A4_status(status_id, status_type, description) VALUES(9, 'Final Approved', 'The Executive Directors Office has given final approval for the RFE and it may be implemented.');
+
+-- System Admins
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(1, 'Kerluke, Orville X.', 'Orville.Kerluke@arl.org', '380356318', TO_DATE('2015-04-17 09:45:55','YYYY-MM-DD HH24:MI:SS'), 'Y', 'Y', 'N', 'N', 'N', 1, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(2, 'Cummings, Kerry X.', 'Kerry.Cummings@arl.org', '8458490766', TO_DATE('2015-05-03 21:41:29','YYYY-MM-DD HH24:MI:SS'), 'Y', 'Y', 'N', 'N', 'N', 2, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(3, 'Brown, Ephram X.', 'Ephram.Brown@arl.org', '8605854972', TO_DATE('2015-07-16 21:59:31','YYYY-MM-DD HH24:MI:SS'), 'Y', 'Y', 'N', 'N', 'N', 3, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(4, 'Ebert, Fenton X.', 'Fenton.Ebert@arl.org', '3688368487', TO_DATE('2015-08-14 17:55:50','YYYY-MM-DD HH24:MI:SS'), 'Y', 'Y', 'N', 'N', 'N', 4, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(5, 'Littel, Brionna X.', 'Brionna.Littel@arl.org', '3340396078', TO_DATE('2015-01-12 20:13:11','YYYY-MM-DD HH24:MI:SS'), 'Y', 'Y', 'N', 'N', 'N', 5, 1);
+-- Lab Direcotors (One has admin)
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(6, 'Jacobson, Emmit X.', 'Emmit.Jacobson@arl.org', '936688236', TO_DATE('2015-02-05 02:31:24','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'Y', 'N', 'N', 1, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(7, 'Baumbach, Jaeden X.', 'Jaeden.Baumbach@arl.org', '9598964688', TO_DATE('2015-03-02 19:32:45','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'Y', 'N', 'N', 2, 2);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(8, 'Lang, Saundra X.', 'Saundra.Lang@arl.org', '5330077589', TO_DATE('2015-03-18 13:54:16','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'Y', 'N', 'N', 3, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(9, 'Greenfelder, Archibald X.', 'Archibald.Greenfelder@arl.org', '8165471560', TO_DATE('2015-04-14 07:40:41','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'Y', 'N', 'N', 4, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(10, 'Stokes, Tyrek X.', 'Tyrek.Stokes@arl.org', '4751022698', TO_DATE('2015-10-07 03:53:57','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'Y', 'N', 'N', 5, 1);
+-- Chair and Exec
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(11, 'Rau, Bryon X.', 'Bryon.Rau@arl.org', '1103104969', TO_DATE('2015-01-31 17:49:42','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'Y', 'N', 6, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(12, 'Bartell, Alzina X.', 'Alzina.Bartell@arl.org', '7199360834', TO_DATE('2015-08-16 20:24:06','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'Y', 6, 1);
+-- Normal Employees
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(13, 'Lakin, Gennie X.', 'Gennie.Lakin@arl.org', '7904791542', TO_DATE('2015-05-09 08:24:52','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 6, 2);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(14, 'Harris, Rosie X.', 'Rosie.Harris@arl.org', '4093440716', TO_DATE('2015-02-03 09:41:18','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 6, 2);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(15, 'McClure, Miesha X.', 'Miesha.McClure@arl.org', '4666305987', TO_DATE('2015-03-14 14:54:31','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 6, 2);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(16, 'Walker, Marvin X.', 'Marvin.Walker@arl.org', '2083277705', TO_DATE('2015-08-06 09:45:38','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 1, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(17, 'Roob, Deonta X.', 'Deonta.Roob@arl.org', '7071241870', TO_DATE('2015-03-23 11:18:02','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 2, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(18, 'Treutel, Almeda X.', 'Almeda.Treutel@arl.org', '8200681451', TO_DATE('2015-08-01 07:00:39','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 3, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(19, 'Predovic, Matteo X.', 'Matteo.Predovic@arl.org', '8041791806', TO_DATE('2015-01-13 17:50:03','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 4, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(20, 'Bartoletti, Lasonya X.', 'Lasonya.Bartoletti@arl.org', '8623144389', TO_DATE('2015-11-10 05:19:12','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 5, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(21, 'Gerlach, Bennie X.', 'Bennie.Gerlach@arl.org', '8885691293', TO_DATE('2015-09-18 15:53:45','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 1, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(22, 'Denesik, Auther X.', 'Auther.Denesik@arl.org', '7169510424', TO_DATE('2015-01-13 11:13:56','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 2, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(23, 'Denesik, Easton X.', 'Easton.Denesik@arl.org', '9907978017', TO_DATE('2015-03-24 12:16:20','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 3, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(24, 'Hermann, Adria X.', 'Adria.Hermann@arl.org', '4446520472', TO_DATE('2015-03-01 13:32:50','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 4, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(25, 'Gislason, Lorenza X.', 'Lorenza.Gislason@arl.org', '8984489442', TO_DATE('2015-09-07 17:42:55','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 5, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(26, 'Rath, Jamin X.', 'Jamin.Rath@arl.org', '2437299866', TO_DATE('2015-06-25 07:50:19','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 1, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(27, 'Balistreri, Cordell X.', 'Cordell.Balistreri@arl.org', '233662106', TO_DATE('2015-09-22 10:24:06','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 2, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(28, 'Veum, Coolidge X.', 'Coolidge.Veum@arl.org', '7958967827', TO_DATE('2015-01-10 21:13:57','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 3, 1);
+INSERT INTO F15A4_emp(employee_id, employee_name, email, phone, status_effective_date, active, is_sys_admin, is_lab_dir, is_chair, is_exec_dir, F15A4_lab_lab_id, F15A4_auth_auth_id) VALUES(29, 'Bosco, Randolph X.', 'Randolph.Bosco@arl.org', '3699302866', TO_DATE('2015-03-06 07:44:08','YYYY-MM-DD HH24:MI:SS'), 'Y', 'N', 'N', 'N', 'N', 4, 1);
+
+-- renable triggers
+alter trigger F15A4_auth_PK_trig disable;
+alter trigger F15A4_comment_PK_trig disable;
+alter trigger F15A4_document_PK_trig disable;
+alter trigger F15A4_emp_PK_trig disable;
+alter trigger F15A4_history_PK_trig disable;
+alter trigger F15A4_lab_PK_trig disable;
+alter trigger F15A4_rfe_PK_trig disable;
+alter trigger F15A4_status_PK_trig disable;
+alter trigger F15A4_task_PK_trig disable;
