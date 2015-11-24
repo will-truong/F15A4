@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B6CCA802-4AE2-35F0-3840-B9CFC0A1EF41" name="F15A4_history">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:32:03 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="history_id" id="7809F13E-A107-C9B4-CED3-C04B5E326728">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:32:15 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="effective_date" id="F107E42B-6B0B-3A32-90CD-0A9CA9626B49">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:46:54 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="2F009FF3-AA3D-3D4D-094A-749C6A78FED0">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:33:01 UTC</createdTime>
+<generatorID>E9F5C32C-D810-CFF8-E6A9-692D424C0CDA</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>F9742F21-4C9B-240C-F8D1-3BD59DE421BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_id" id="A80377CC-2735-612D-2655-630B7AF1A54B">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 18:54:22 UTC</createdTime>
+<generatorID>E72189BE-D5E5-2B59-659C-4FC1C0467E27</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>E29FD78D-1A93-E87E-3F2D-5AB5B67F123D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="E1C57773-02DB-3E9A-48FA-9513F1DCB9AE">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:49:13 UTC</createdTime>
+<generatorID>375D1A82-9504-89F6-2272-C1CFCD39BA28</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>728A15F2-7120-3812-A7A6-175FCDF53051</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A98A5EE2-79C2-CFA2-AD2A-2A196E2CB52E" name="F15A4_history PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:32:29 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7809F13E-A107-C9B4-CED3-C04B5E326728</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

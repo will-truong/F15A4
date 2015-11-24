@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="528C94B8-CC11-9EB4-7A64-2E62BB30CA04" name="F15A4_emp">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:05:34 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="employee_id" id="728A15F2-7120-3812-A7A6-175FCDF53051">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:37:07 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_name" id="58F57A82-3B82-9F5B-3EBD-38365C313582">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:31:10 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="F2BD606A-80BE-E078-1027-84DC7CA2FB39">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:06:08 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone" id="02B10602-3E0A-9968-2B68-DEE89AC51977">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:35:04 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_effective_date" id="82902869-828E-9E23-D61F-A882CCA3A7BB">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:37:40 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="AE6772F6-2ADB-EFFE-FF23-FC1E91F41D86">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 23:43:46 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_sys_admin" id="75239C55-85D8-92B2-F76E-DCA58A5CB694">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 19:00:47 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_lab_dir" id="056B8328-CC5C-3553-5C81-0A5D7B31FA7F">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 19:01:02 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_chair" id="A253916E-A386-F3AF-0844-C8D412A56065">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 19:01:13 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="is_exec_dir" id="C88AF39F-D407-1142-9A8E-5517541AC30C">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 19:01:32 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab_id" id="27C8CFB2-5329-5042-59A2-ED3AC8C175C2">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:23:22 UTC</createdTime>
+<generatorID>F695D515-93BB-AA3D-4D63-02865B781107</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>415C67A3-1B68-11CA-E33C-DEFCD1D8FA34</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_id" id="E3048CA6-5123-0597-BCED-86421829D2AF">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 18:35:03 UTC</createdTime>
+<generatorID>F2FA29D8-612B-4AFE-DCBB-1735EE0CD18F</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>1A8506B6-A58D-B280-492E-2F9DADF47962</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E8103690-FA58-8800-0A53-FE133F2D60DD" name="F15A4_emp PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:06:16 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>728A15F2-7120-3812-A7A6-175FCDF53051</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

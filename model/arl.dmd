@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="arl" id="F264A092-912C-FC8B-69D6-B61BE9CF8212" version="3.5">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:02:30 UTC</createdTime>
+<ownerDesignName>rfe</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F264A092-912C-FC8B-69D6-B61BE9CF8212</designId>
+</OSDM_Design>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Commenter" directorySegmentName="seg_0" id="D87DB4DD-F3E9-B4FB-9A7C-184A58BD127E">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:43:42 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<sourcePk>E8103690-FA58-8800-0A53-FE133F2D60DD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>528C94B8-CC11-9EB4-7A64-2E62BB30CA04</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>06B770DC-0AC1-7610-D479-B2CDD6678BD7</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

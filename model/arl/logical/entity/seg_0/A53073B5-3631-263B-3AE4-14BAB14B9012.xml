@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A53073B5-3631-263B-3AE4-14BAB14B9012" name="F15A4_exec_dir">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:06:59 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>528C94B8-CC11-9EB4-7A64-2E62BB30CA04</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>

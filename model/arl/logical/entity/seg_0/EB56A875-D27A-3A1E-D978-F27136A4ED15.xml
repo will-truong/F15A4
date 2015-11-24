@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EB56A875-D27A-3A1E-D978-F27136A4ED15" name="F15A4_rfe">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:22:33 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rfe_id" id="F9742F21-4C9B-240C-F8D1-3BD59DE421BF">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:22:46 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="explanation" id="AF5FBED8-8695-8E5E-EE6E-0F2544DCFD29">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:18:17 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="alt_protections" id="0D96344D-3E83-9BE1-FB43-7EC39E84A423">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:18:34 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_id" id="7527D385-F9D1-1261-D648-F7A1DC66BEAD">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:30:27 UTC</createdTime>
+<generatorID>0E3C7336-02DB-F15F-0508-9E02BC62CE70</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E29FD78D-1A93-E87E-3F2D-5AB5B67F123D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="6DDDCF0F-E319-60C6-6CDD-4118FB37B14B">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:43:13 UTC</createdTime>
+<generatorID>0249F7ED-DEAC-7F26-BEBE-41652FB0A787</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>728A15F2-7120-3812-A7A6-175FCDF53051</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="27662F89-D1D8-90A0-8DF7-AA12A5A4E68C" name="F15A4_rfe PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:23:11 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F9742F21-4C9B-240C-F8D1-3BD59DE421BF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

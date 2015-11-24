@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="861C6004-3231-73A9-2409-80A2F4AE746A" name="F15A4_document">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:36:14 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="doc_id" id="97944B99-F36D-38AC-26D9-98B1F1F99E93">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:36:34 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_blob" id="D668B74C-5167-C24C-7935-228813AD4E9C">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:01:53 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_comments" id="B8BA3B4A-D8C1-2751-32E5-EE74186F77A4">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:02:04 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="filename" id="753C0940-D3CF-6A14-0E7E-221967DD24F0">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:59:03 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_mimetype" id="22DBECE3-D43F-7771-2A90-C07E346C910A">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:59:32 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="file_charset" id="C80EB628-9365-1297-2A3F-B17083963148">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:01:29 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<ownDataTypeParameters>512,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tags" id="46031F05-3643-A3CF-DAF9-47945F4A890D">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 21:02:27 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="A0C00E5B-2AF7-99DE-C850-E2DDF984F1AA">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:42:55 UTC</createdTime>
+<generatorID>81715598-3748-1311-91CB-5593DF852F8A</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>F9742F21-4C9B-240C-F8D1-3BD59DE421BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4B884A6D-E296-6D9F-4C12-51A1D8D97F09" name="F15A4_documents PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:36:56 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>97944B99-F36D-38AC-26D9-98B1F1F99E93</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

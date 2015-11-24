@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73584306-D70F-A1B5-5754-4CE092A7F80C" name="F15A4_auth">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:13:26 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="auth_id" id="1A8506B6-A58D-B280-492E-2F9DADF47962">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:13:55 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="authorization" id="B55F13BA-A3AA-5197-1F4E-481134763ECE">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:14:30 UTC</createdTime>
+<comment>Check Constraint on right: edit or view only</comment>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="E00C39D7-5427-D608-D42A-1620617EF418">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 19:11:32 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B37FB6B3-B6C2-1C30-9688-C11F0C317555" name="F15A4_authentication PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:14:11 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1A8506B6-A58D-B280-492E-2F9DADF47962</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

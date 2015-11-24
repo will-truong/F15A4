@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="06B770DC-0AC1-7610-D479-B2CDD6678BD7" name="F15A4_comment">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:37:07 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="comment_id" id="2DD92ACC-BEBF-9934-123B-C08DCAB6467F">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:37:22 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comment_body" id="D0F5C399-43AE-50F0-26B8-22B35BC6B55E">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:51:20 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="845EE822-3439-E8CD-00EB-EEA44C5BEF93">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:42:46 UTC</createdTime>
+<generatorID>DC0E0078-5E36-7123-51CA-8548720DE0D9</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>F9742F21-4C9B-240C-F8D1-3BD59DE421BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="50E00766-4A92-9313-C056-7283A1987105">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:37:29 UTC</createdTime>
+<generatorID>D87DB4DD-F3E9-B4FB-9A7C-184A58BD127E</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>728A15F2-7120-3812-A7A6-175FCDF53051</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B8B61E40-3B11-36AC-E695-CAD553B69773" name="F15A4_comment PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:37:35 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2DD92ACC-BEBF-9934-123B-C08DCAB6467F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

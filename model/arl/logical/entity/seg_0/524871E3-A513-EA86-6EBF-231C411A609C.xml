@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="524871E3-A513-EA86-6EBF-231C411A609C" name="F15A4_task">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:33:53 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="task_id" id="892C1B4C-B26B-F51B-00AE-EE93389D378A">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:34:22 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="task_abbreviation" id="CE49846A-7171-C078-38CC-67A5BA1AA73F">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:54:28 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="674C8601-50D6-C96F-1FAD-BD5EE927DB13">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:55:13 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="AD2E9469-B10F-5D4D-CACD-36CD5E6799C1">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-19 20:54:15 UTC</createdTime>
+<generatorID>6CE5E5E4-305F-3248-748A-27B3E0F95018</generatorID>
+<ownerDesignName>arl</ownerDesignName>
+<referedAttribute>F9742F21-4C9B-240C-F8D1-3BD59DE421BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DB0397EE-5E46-D604-724A-8183EF474394" name="F15A4_task PK">
+<createdBy>Cedric</createdBy>
+<createdTime>2015-11-02 22:34:32 UTC</createdTime>
+<ownerDesignName>arl</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>892C1B4C-B26B-F51B-00AE-EE93389D378A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
