@@ -1,0 +1,27 @@
+> LOGIN
+
+>HOME
+>MY RFEs
+
+select * from F15A4_rfe where F15A4_EMP_EMPLOYEE_ID = :P2_EMP;
+
+>MY FYI RFEs
+
+select * from F15A4_RFE r where r.RFE_ID in (select F15A4_rfe_rfe_id from F15A4_CONTACT c WHERE c.F15A4_EMP_EMPLOYEE_ID = :P2_EMP);
+
+>MY APPROVALS
+
+select * from F15A4_rfe r where (((select is_chair from F15A4_emp where employee_id = :P2_EMP) = 1) and r.F15A4_status_status_id = 113) or (((select is_exec_dir from F15A4_emp where employee_id = :P2_EMP) = 1) and r.F15A4_status_status_id = 115) or (((select is_sys_admin from F15A4_emp where employee_id = :P2_EMP) = 1) and r.F15A4_status_status_id = 103) or (((select is_lab_dir from F15A4_emp where employee_id = :P2_EMP) = 1) and r.F15A4_status_status_id = 111);
+ 
+>ADMIN PANEL
+>- RFE'S
+
+select * from F15A4_rfe where (select F15A4_AUTH_AUTH_ID from F15A4_emp where employee_id = :P2_EMP) = 101;
+
+>EMPLOYEES
+
+select EMPLOYEE_NAME,EMAIL,PHONE,STATUS_EFFECTIVE_DATE,ACTIVE,IS_SYS_ADMIN,IS_LAB_DIR,IS_CHAIR,IS_EXEC_DIR,LAB_NAME,AUTHORIZATION from F15A4_emp e, F15A4_lab l, F15A4_auth a where e.f15a4_lab_lab_id = l.lab_id and e.F15A4_AUTH_AUTH_ID = a.auth_id and (select F15A4_AUTH_AUTH_ID from F15A4_emp where employee_id = :P2_EMP) = 101;
+
+>LABS
+
+select * from F15A4_lab where (select F15A4_AUTH_AUTH_ID from F15A4_emp where employee_id = :P2_EMP) = 101;
