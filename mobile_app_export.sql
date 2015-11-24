@@ -27,7 +27,7 @@ prompt APPLICATION 22704 - Restful Mobile App
 -- Application Export:
 --   Application:     22704
 --   Name:            Restful Mobile App
---   Date and Time:   02:29 Tuesday November 24, 2015
+--   Date and Time:   08:09 Tuesday November 24, 2015
 --   Exported By:     DYSNEX@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -106,7 +106,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'DYSNEX@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20151124021646'
+,p_last_upd_yyyymmddhh24miss=>'20151124072022'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
@@ -1924,7 +1924,7 @@ wwv_flow_api.create_user_interface(
 ,p_use_auto_detect=>false
 ,p_is_default=>true
 ,p_theme_id=>51
-,p_home_url=>'f?p=&APP_ID.:1:&SESSION.'
+,p_home_url=>'f?p=&APP_ID.:2:&SESSION.'
 ,p_login_url=>'f?p=&APP_ID.:LOGIN_JQM_SMARTPHONE:&SESSION.'
 ,p_global_page_id=>0
 ,p_navigation_list_id=>wwv_flow_api.id(18184885058195470166)
@@ -2073,7 +2073,7 @@ wwv_flow_api.create_page(
 ,p_cache_mode=>'NOCACHE'
 ,p_help_text=>'No help is available for this page.'
 ,p_last_updated_by=>'DYSNEX@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20151124021646'
+,p_last_upd_yyyymmddhh24miss=>'20151124072022'
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(18081101679364458720)
@@ -2090,16 +2090,17 @@ wwv_flow_api.create_page_plug(
 wwv_flow_api.create_flash_chart5(
  p_id=>wwv_flow_api.id(18081101739632458721)
 ,p_default_chart_type=>'3DColumn'
-,p_chart_title=>'New'
+,p_chart_title=>'Bar Chart'
 ,p_chart_rendering=>'SVG_ONLY'
-,p_display_attr=>':H:N:V:X::N::::Default:N::N:N:N:Default:N::S:'
+,p_display_attr=>':H:N:V:X::N::::Default:N:N:N:N:N:Default:N::S:'
 ,p_dial_tick_attr=>':::::::::::'
 ,p_gantt_attr=>':::::::::::::::::::'
 ,p_pie_attr=>':::'
-,p_map_attr=>'::::::::::'
+,p_map_attr=>':::N:N:Series:::::'
 ,p_margins=>':::'
 , p_omit_label_interval=> null
 ,p_bgtype=>'Trans'
+,p_grid_gradient_rotation=>0
 ,p_color_scheme=>'6'
 ,p_x_axis_label_font=>'Tahoma:10:#000000'
 ,p_y_axis_label_font=>'Tahoma:10:#000000'
@@ -2143,7 +2144,7 @@ wwv_flow_api.create_flash_chart5_series(
 );
 wwv_flow_api.create_page_plug(
  p_id=>wwv_flow_api.id(18081102037245458724)
-,p_plug_name=>'Line Chart'
+,p_plug_name=>'Marker Chart'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_api.id(18184887239838470178)
@@ -2156,16 +2157,17 @@ wwv_flow_api.create_page_plug(
 wwv_flow_api.create_flash_chart5(
  p_id=>wwv_flow_api.id(18081102169747458725)
 ,p_default_chart_type=>'3DColumn'
-,p_chart_title=>'Line Chart'
+,p_chart_title=>'Marker Chart'
 ,p_chart_rendering=>'SVG_ONLY'
-,p_display_attr=>':H:N:V:X::N::::Default:N::N:N:N:Default:N::S:'
+,p_display_attr=>':H:N:V:X::N::::Default:N:N:N:N:N:Default:N::S:'
 ,p_dial_tick_attr=>':::::::::::'
 ,p_gantt_attr=>':::::::::::::::::::'
 ,p_pie_attr=>':::'
-,p_map_attr=>'::::::::::'
+,p_map_attr=>':::N:N:Series:::::'
 ,p_margins=>':::'
 , p_omit_label_interval=> null
 ,p_bgtype=>'Trans'
+,p_grid_gradient_rotation=>0
 ,p_color_scheme=>'6'
 ,p_x_axis_label_font=>'Tahoma:10:#000000'
 ,p_y_axis_label_font=>'Tahoma:10:#000000'
